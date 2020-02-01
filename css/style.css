@@ -1,0 +1,158 @@
+/*STARTER CODE*/
+
+/*
+We have started some of the selectors for you.
+For others we have provided hints on what the selectors should be.
+There are some missing selectors.
+
+Make sure to learn what the starter code does!!
+*/
+
+/* inport Google Font*/ 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body{
+  color: black;
+  /* Andika font (you will need to use a Google Fonts link) with sans-serif fallback */
+  font-family: Andika, sans-serif;
+  font-size: 16px;
+  margin: 1.2em;
+  background-size: cover ;
+  background-position: center;
+
+  /* Page background should use the provided image as a centered, non-repeating background that takes up the entire page.  
+  Supply a fallback color of light grey (#DDDDDD) if the image isn’t available. */
+  background-image: url("../images/pigeon-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #dddddd;
+}
+
+main{
+  margin-bottom: 100px;
+}
+
+h1{
+  color: #8000FF;
+  font-size: 2em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+caption{
+  margin:5px 0px;
+}
+
+p{
+  /* Paragraph text should be black, 16px, with 10px of padding on the top only */
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+a{
+  /* Links should be 16px, dark red (#C12258, #B21F50, or #B21F50), with a wavy underline.  
+  Choose the color that passes the Wave color contrast checker. */
+  font-size: 16px;
+  color: #B21F50;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+a: focus{
+  /* focused elements should have a 2px black border */
+  border-style: solid;
+  border-width: 2px;
+
+}
+
+table{
+  color: black;
+  /* 2px black border around the exterior */
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: black;
+  border-collapse: separate;
+  border-spacing: 0;
+  /* Should be centered on a large screen */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colhead{
+  /* Column headers are always at least 100px wide, with 10px of padding. 
+  Column header text is white, centered, and uppercase with a dark red background (#7e0820).*/
+  min-width: 100px;
+  padding: 10px; 
+  background-color: #7e0820;
+  color: white;
+  text-align: center;
+  border-top: 2px solid black;
+}
+
+.rowhead{
+  /* Row headers have a 2px black border that matches the rest of the rows.*/
+  text-align: center;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  padding: 15px;
+}
+
+td{
+  /* Table cells have centered text with a 2px black border on only one side (the top), and 15px padding on all sides.*/
+  text-align: center;
+  border-top: 2px solid black;
+  padding: 15px;
+}
+
+/* Every odd numbered table row has a grey background (#D1D1D1), every even table row has a transparent background.*/
+tr:nth-child(odd) {
+  background-color: #D1d1d1;
+}
+tr:nth-child(even) {
+  background-color: transparent;
+}
+.rowhead:last-child {
+  border-bottom: 2px solid black;
+}
+
+/* Hovering over a row changes the background color to the column header red with an opacity of .5.  
+HINT: Start with rgb(126,8,32). */
+tr:hover{
+    background-color: rgb(126,8,32, .5);
+    color: black;
+}
+
+/* 15px radius rounded exterior corners */
+/* top-left border-radius */
+thead tr:first-child th:first-child {
+  border-top-left-radius: 15px;
+  border-left:2px solid black;
+}
+/* top-right border-radius */
+thead tr:first-child th:last-child {
+  border-top-right-radius: 15px;
+  border-right:2px solid black;
+}
+/* bottom-left border-radius */
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+  border-left:2px solid black;
+}
+
+/* bottom-right border-radius */
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+  border-right:2px solid black;
+}
+
+footer{
+  /* Footer is always at least 60px tall. */
+  min-height: 60px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  background:black;
+  text-align:center;
+  color: white;
+}
